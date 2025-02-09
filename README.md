@@ -19,17 +19,17 @@ Compatible avec Next.js (utilisation de 'use client')
 ## Installation
 
 Clonez ce dépôt GitHub sur votre machine locale :
-
+```sh
 git clone https://github.com/JokaDev731/scrambling-effect.git
-
+```
 Accédez au dossier du projet :
-
+```sh
 cd nom-du-repo
-
+```
 Assurez-vous d'avoir Node.js et npm installés, puis installez les dépendances :
-
+```sh
 npm install
-
+```
 Utilisation
 
 Importez le composant Header dans votre fichier principal (par exemple, pages/index.js ou app/page.js pour Next.js) :
@@ -77,12 +77,18 @@ Les contributions sont les bienvenues !
 
 Forkez le projet
 
-Créez une nouvelle branche (git checkout -b feature-nouvelle-fonction)
-
-Commitez vos modifications (git commit -m 'Ajout d'une nouvelle fonctionnalité')
-
-Poussez la branche (git push origin feature-nouvelle-fonction)
-
+Créez une nouvelle branche 
+```sh
+git checkout -b feature-nouvelle-fonction)
+```
+Commitez vos modifications 
+```sh
+git commit -m 'Ajout d'une nouvelle fonctionnalité'
+```
+Poussez la branche 
+```sh
+git push origin feature-nouvelle-fonction
+```
 Ouvrez une Pull Request
 
 
@@ -104,17 +110,17 @@ Features
 ## Installation
 
 Clone this GitHub repository to your local machine:
-
+```sh
 git clone https://github.com/JokaDev731/scrambling-effect.git
-
+```
 Navigate to the project folder:
-
+```sh
 cd repository-name
-
+```
 Make sure you have Node.js and npm installed, then install the dependencies:
-
+```sh
 npm install
-
+```
 ####   Usage
 
 Import the Header component into your main file (e.g., pages/index.js or app/page.js for Next.js):
@@ -158,17 +164,17 @@ Contributions are welcome!
 
     Fork the project.
     Create a new branch:
-
+```sh
 git checkout -b feature-new-functionality
-
+```
 Commit your changes:
-
+```sh
 git commit -m 'Added a new feature'
-
+```
 Push the branch:
-
+```sh
 git push origin feature-new-functionality
-
+```
 Open a Pull Request.
 
 
