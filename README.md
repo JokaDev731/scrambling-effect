@@ -24,7 +24,7 @@ git clone https://github.com/JokaDev731/scrambling-effect.git
 ```
 Accédez au dossier du projet :
 ```sh
-cd nom-du-repo
+cd scrambling-effect
 ```
 Assurez-vous d'avoir Node.js et npm installés, puis installez les dépendances :
 ```sh
@@ -115,7 +115,7 @@ git clone https://github.com/JokaDev731/scrambling-effect.git
 ```
 Navigate to the project folder:
 ```sh
-cd repository-name
+cd scrambling-effect
 ```
 Make sure you have Node.js and npm installed, then install the dependencies:
 ```sh
