@@ -1,10 +1,10 @@
 "use client"
 import { useEffect, useRef } from "react"
 
-function scrambleText(element, finalText, duration = 3, revealSpeed = 100) {
+function scrambleText(element, finalText, duration = 3, revealSpeed = 100,   scrambleSpeed = 10) {
   const chars =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
-  let iterations = Math.ceil(duration * 30);
+  let iterations = Math.ceil(duration * scrambleSpeed);
   const currentText = element.textContent;
   let scrambled = currentText.split("");
   let revealingIndex = 0;
