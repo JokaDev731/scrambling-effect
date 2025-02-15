@@ -1,29 +1,41 @@
 "use client"
 import { useEffect, useRef } from "react"
 
-function scrambleText(element, finalText, duration = 3) {
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()"
-  let iterations = Math.ceil(duration * 30)
-  const currentText = element.textContent
-  let scrambled = ""
+function scrambleText(element, finalText, duration = 3, revealSpeed = 100) {
+  const chars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+  let iterations = Math.ceil(duration * 30);
+  const currentText = element.textContent;
+  let scrambled = currentText.split("");
+  let revealingIndex = 0;
 
   const updateText = () => {
-    scrambled = currentText
-      .split("")
-      .map(() => chars[Math.floor(Math.random() * chars.length)])
-      .join("")
+    scrambled = scrambled.map((char, index) =>
+      index < revealingIndex
+        ? finalText[index]
+        : chars[Math.floor(Math.random() * chars.length)]
+    );
 
-    element.textContent = scrambled
+    element.textContent = scrambled.join("");
 
-    iterations--
+    iterations--;
     if (iterations <= 0) {
-      element.textContent = finalText // Remet le texte normal
-      return
+      revealText(); // Commence la révélation progressive
+      return;
     }
-    requestAnimationFrame(updateText)
-  }
+    requestAnimationFrame(updateText);
+  };
 
-  updateText()
+  const revealText = () => {
+    if (revealingIndex < finalText.length) {
+      scrambled[revealingIndex] = finalText[revealingIndex];
+      element.textContent = scrambled.join("");
+      revealingIndex++;
+      setTimeout(revealText, revealSpeed);
+    }
+  };
+
+  updateText();
 }
 
 export default function Header() {
