@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useRef } from "react"
 
-function scrambleText(element, finalText, duration = 3, revealSpeed = 100,   scrambleSpeed = 10) {
+function scrambleText(element, finalText, duration = 3, revealSpeed = 100,   scrambleSpeed = 10) {  //duration = durée de l'enimation ;  revealSpeed = vitesse de la révélation et ScrambleSpeed = vitesse de changement des lettres
   const chars =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
   let iterations = Math.ceil(duration * scrambleSpeed);
@@ -20,7 +20,7 @@ function scrambleText(element, finalText, duration = 3, revealSpeed = 100,   scr
 
     iterations--;
     if (iterations <= 0) {
-      revealText(); // Commence la révélation progressive
+      revealText(); 
       return;
     }
     requestAnimationFrame(updateText);
